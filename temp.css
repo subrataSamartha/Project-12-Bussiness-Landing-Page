@@ -1,0 +1,104 @@
+.hero {
+  padding: 0 80px;
+  background-color: #636c79;
+  padding-top: var(--section-offset);
+  padding-bottom: var(--section-offset);
+
+  display: flex;
+}
+
+.hero .left {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+}
+.hero .left img {
+  max-width: 340px;
+}
+
+.hero .right {
+  flex: 1;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero .right .hero-heading {
+  font-size: 48px;
+  max-width: 380px;
+}
+.hero .right .hero-description {
+  font-size: 18px;
+  margin-top: 30px;
+  max-width: 380px;
+  opacity: 0.7;
+}
+.hero .right form {
+  margin-top: 30px;
+  padding: 5px;
+  background-color: white;
+}
+.hero .right form input {
+  font-size: 16px;
+  border: none;
+}
+.hero .right form button {
+  padding: 10px 32px;
+  background-color: #8bb7a2;
+  color: white;
+  font-size: 16px;
+  border: none;
+  margin-left: 50px;
+}
+.hero .right form button:hover {
+  background-color: #6ea58b;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+/* stat-section ------------------------------------------------------------------------------ */
+.stat-section {
+  width: 100%;
+  padding: 0px 80px;
+  margin-top: var(--section-offset);
+  margin-bottom: var(--section-offset);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stat-section h2 {
+  max-width: 410px;
+  text-align: center;
+  font-size: 36px;
+}
+.stat-section .stat-list {
+  width: 840px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.stat-section .stat-list .items {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.stat-section .stat-list .items .stat {
+  font-size: 24px;
+  font-weight: bolder;
+}
+.stat-section .stat-list .items .stat-desc {
+  font-size: 16px;
+  margin-top: 10px;
+}
+.stat-section img {
+  margin-top: 30px;
+  max-height: 420px;
+}
