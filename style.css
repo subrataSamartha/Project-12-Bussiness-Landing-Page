@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap");
 :root {
   --myBlueGrey: #636c79;
   --myPestalGreen: #8bb7a2;
@@ -7,7 +8,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
+  font-family: "Roboto", sans-serif;
   list-style: none;
 }
 
@@ -17,6 +18,16 @@
   font-size: 16px;
 }
 
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+#section-1 {
+  background-color: var(--myBlueGrey);
+}
+
+/* header section--------------------------- */
 header {
   background-color: var(--myBlueGrey);
   color: white;
@@ -55,7 +66,7 @@ header .nav .menu ul {
 header .nav .menu ul li {
   margin: 0 5px;
   padding: 8px 15px;
-  border: 2px red solid;
+
   cursor: pointer;
 }
 header .nav .menu ul li:hover {
@@ -78,17 +89,25 @@ header .nav .nav-btn:hover {
 /* Hero Section start ---------------------------------------------------- */
 .hero {
   width: 100%;
-  border: 2px red solid;
+
   display: flex;
   flex-direction: column;
   background-color: var(--myBlueGrey);
 }
 
 .hero-left {
+  padding: 24px;
+}
+.hero-left .hero-img {
+  width: 100%;
+}
+.hero-left .hero-img img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .hero-right {
-  border: 2px blue solid;
   padding: 24px 24px;
   color: white;
 }
@@ -100,23 +119,25 @@ header .nav .nav-btn:hover {
 }
 .hero-right-content h1 {
   width: 70%;
-  border: 2px red solid;
+  min-width: 300px;
+
   font-size: 36px;
 }
 .hero-right-content p {
   width: 90%;
+  min-width: 340px;
   font-size: 16px;
   opacity: 0.7;
 }
 .email-form {
   width: 80%;
-  border: 2px blue solid;
+  min-width: 340px;
   display: flex;
   background-color: white;
   padding: 7px;
 }
 .email-form input {
-  padding: 10px 10px;
+  padding: 10px 0px 10px 10px;
   flex-grow: 1;
   border: none;
   font-size: 14px;
@@ -130,6 +151,12 @@ header .nav .nav-btn:hover {
   cursor: pointer;
 }
 
+/* section 2 --------------------------------------- */
+.container-2 {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 /* Media Query ------------------------------------------------------------ */
 @media screen and (min-width: 600px) {
   header.nav {
@@ -140,5 +167,31 @@ header .nav .nav-btn:hover {
   }
   header .nav .menu {
     display: flex;
+  }
+
+  /* hero section ---------------- */
+  .hero {
+    flex-direction: row;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .hero-left {
+    width: 40%;
+    padding: 64px;
+  }
+  .hero-right {
+    width: 60%;
+  }
+
+  .hero-right-content {
+    gap: 32px;
+  }
+  .hero-right {
+    display: flex;
+    align-items: center;
+    padding: 64px;
+  }
+  .hero-right-content h1 {
+    font-size: 48px;
   }
 }
