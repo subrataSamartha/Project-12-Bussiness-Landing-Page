@@ -10,12 +10,19 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   list-style: none;
+  /* outline: 2px solid red; */
 }
 
 /* utility class */
 .btn {
   padding: 10px 30px;
   font-size: 16px;
+}
+
+.green-btn {
+  background-color: var(--myPestalGreen);
+  border: none;
+  color: white;
 }
 
 .container {
@@ -155,7 +162,6 @@ header .nav .nav-btn:hover {
 .container-2 {
   max-width: 1280px;
   margin: 0 auto;
-  border: 2px red solid;
 }
 .container-2 h1 {
   text-align: center;
@@ -187,6 +193,42 @@ header .nav .nav-btn:hover {
   width: 100%;
 }
 
+/* section-3 ---------------------------------------------------------------*/
+.container-3 {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px;
+}
+.container-3 h1 {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 48px;
+}
+
+.container-3 .service-secs {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 24px;
+}
+
+.container-3 .service-secs .left,
+.container-3 .service-secs .right {
+  width: 100%;
+  text-align: center;
+}
+
+.container-3 .service-secs .left .content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.container-3 .service-secs .right img {
+  padding: 24px;
+  width: 100%;
+  object-fit: cover;
+}
 /* Media Query ------------------------------------------------------------ */
 @media screen and (min-width: 600px) {
   header.nav {
@@ -226,10 +268,52 @@ header .nav .nav-btn:hover {
   }
 
   /* section 2 --------------------- */
+  .container-2 h1 {
+    font-size: 56px;
+    font-weight: 500;
+  }
   .container-2 .num-cards {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left: 24px;
+    padding-right: 24px;
   }
   .section-2-img {
     padding: 72px;
+  }
+
+  /* section 3 ---------------------------------------------------------------- */
+  .container-3 {
+    padding: 72px;
+  }
+  .container-3 .service-secs {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .container-3 .service-secs .left,
+  .container-3 .service-secs .right {
+    width: 50%;
+    text-align: center;
+  }
+
+  .container-3 .service-secs .left {
+    text-align: start;
+    display: flex;
+    align-items: center;
+  }
+  .container-3 .service-secs .left .content {
+    max-width: 80%;
+    gap: 36px;
+  }
+
+  .container-3 .service-secs .right {
+    padding: 36px;
+  }
+
+  #rev {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0;
   }
 }
