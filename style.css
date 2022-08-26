@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap");
 :root {
   --myBlueGrey: #636c79;
+  --myDeepBlue: #10181d;
+  --myLightBlue: #282f34;
   --myPestalGreen: #8bb7a2;
 }
 
@@ -10,7 +12,7 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   list-style: none;
-  /* outline: 2px solid red; */
+  /* outline: 2px solid white; */
 }
 
 /* utility class */
@@ -104,6 +106,7 @@ header .nav .nav-btn:hover {
 
 .hero-left {
   padding: 24px;
+  display: none;
 }
 .hero-left .hero-img {
   width: 100%;
@@ -115,7 +118,7 @@ header .nav .nav-btn:hover {
 }
 
 .hero-right {
-  padding: 24px 24px;
+  padding: 72px 24px;
   color: white;
 }
 
@@ -140,6 +143,8 @@ header .nav .nav-btn:hover {
   width: 80%;
   min-width: 340px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: white;
   padding: 7px;
 }
@@ -202,7 +207,6 @@ header .nav .nav-btn:hover {
 .container-3 h1 {
   text-align: center;
   margin: 0 auto;
-  margin-top: 48px;
 }
 
 .container-3 .service-secs {
@@ -229,6 +233,93 @@ header .nav .nav-btn:hover {
   width: 100%;
   object-fit: cover;
 }
+
+/* Section 4 -------------------------------------------------------------- */
+.sec4-heading {
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0 auto;
+}
+
+#section-4 .cards {
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+#section-4 .card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#section-4 .card div img {
+  width: 100%;
+}
+#section-4 .card p {
+  opacity: 0.7;
+}
+
+/* footer section --------------------------------------------------------- */
+.footer-head {
+  background-color: var(--myDeepBlue);
+  color: white;
+  padding: 24px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-head .brand img {
+  height: 25px;
+}
+.footer-head .social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 8px;
+}
+.social .social-icon {
+  height: 30px;
+  width: 30px;
+  background-color: var(--myLightBlue);
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social .social-icon i {
+  font-size: 12px;
+}
+.footer-body {
+  padding: 0 24px 24px 24px;
+  color: white;
+  background-color: var(--myDeepBlue);
+}
+.footer-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+}
+
+.footer-menu .menu-items p {
+  font-weight: 500;
+  font-size: 16px;
+  margin: 12px 0;
+}
+.footer-menu .menu-items ul li {
+  line-height: 24px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
 /* Media Query ------------------------------------------------------------ */
 @media screen and (min-width: 600px) {
   header.nav {
@@ -250,9 +341,11 @@ header .nav .nav-btn:hover {
   .hero-left {
     width: 40%;
     padding: 64px;
+    display: block;
   }
   .hero-right {
     width: 60%;
+    padding: 24px 24px;
   }
 
   .hero-right-content {
@@ -285,6 +378,10 @@ header .nav .nav-btn:hover {
   .container-3 {
     padding: 72px;
   }
+  .container-3 h1 {
+    font-size: 56px;
+    font-weight: 500;
+  }
   .container-3 .service-secs {
     display: flex;
     flex-direction: row;
@@ -315,5 +412,56 @@ header .nav .nav-btn:hover {
     display: flex;
     flex-direction: row-reverse;
     gap: 0;
+  }
+
+  /* section 4 ------------------------------------------------------------------*/
+  .sec4-heading {
+    max-width: 1280px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+  .sec4-heading h1 {
+    width: 30%;
+  }
+  .sec4-heading p {
+    width: 40%;
+    line-height: 32px;
+    font-size: 18px;
+    opacity: 0.7;
+  }
+
+  #section-4 .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 24px 72px;
+    justify-content: space-between;
+  }
+
+  #section-4 .card {
+    flex-basis: 25%;
+    justify-content: space-between;
+  }
+
+  /* footer section --------------------------------------------------------------- */
+  .footer-head {
+    max-width: 1280px;
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+  .footer-menu {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    border-top: 1px rgb(168, 168, 168) solid;
+    padding-top: 24px;
+  }
+  .footer-body {
+    max-width: 1280px;
+    padding-left: 72px;
+    padding-right: 72px;
+    margin: 0 auto;
   }
 }
